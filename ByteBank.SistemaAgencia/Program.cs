@@ -15,6 +15,7 @@ namespace ByteBank.SistemaAgencia
             ContaCorrente conta = new ContaCorrente(847, 489754);
 
             Funcionario carlos = new Desenvolvedor("312666");
+            ContaCorrente bruna = new ContaCorrente(256, 813456);
            
             Console.WriteLine(conta.Numero);
             Console.WriteLine(conta.Saldo);
