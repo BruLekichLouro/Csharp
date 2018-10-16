@@ -62,7 +62,12 @@ namespace ByteBank.Modelos
             TotalDeContasCriadas++;
             TaxaOperacao = 30 / TotalDeContasCriadas;
         }
-
+        /// <summary>
+        /// Realiza o saque e atualiza o valor da propriedade <see cref="Saldo"/>
+        /// </summary>
+        /// <exception cref="ArgumentException">Exeção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/>.</exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o <see cref="Saldo"/>é menor que o valor utilizado no argumento <paramref name="valor"</exception>
+        /// <param name="valor">Representa o valor do saque.Deve ser maior que 0 e menor que o <see cref="Saldo"/></param>
         public void Sacar(double valor)
         {
             if (valor < 0)
@@ -79,12 +84,22 @@ namespace ByteBank.Modelos
             _saldo -= valor;
 
         }
-
+        /// <summary>
+        /// Realiza o depósito e atualiza o valor da propriedade <see cref="Saldo"/>
+        /// </summary>
+        /// <param name="valor">Representa o valor que será acrescentado à propriedade <see cref="Saldo"/></param>
         public void Depositar(double valor)
         {
             _saldo += valor;
         }
 
+        /// <summary>
+        /// Realiza o saqueeme uma  conta e depósito na segunda. Atualiza o valor da propriedade <see cref="Saldo"/>
+        /// </summary>
+        /// <exception cref="ArgumentException">Exeção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"</exception>
+        /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o <see cref="Saldo"/>é menor que o valor utilizado no argumento <paramref name="valor"</exception>
+        /// <param name="valor">Representa o valor que será sacado de uma conta e acrescentado à <paramref name="contaDestino"/></param>
+        /// <param name="contaDestino">"Representa a conta que receberá o <paramref name="valor"/>sacado.</param>
         public void Transferir(double valor, ContaCorrente contaDestino)
         {
             if (valor < 0)

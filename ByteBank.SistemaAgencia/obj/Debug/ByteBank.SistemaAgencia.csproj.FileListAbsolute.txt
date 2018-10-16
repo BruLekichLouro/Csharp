@@ -8,3 +8,4 @@ c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.
 c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CopyComplete
 c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe
 c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.pdb
+C:\Users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.xml
