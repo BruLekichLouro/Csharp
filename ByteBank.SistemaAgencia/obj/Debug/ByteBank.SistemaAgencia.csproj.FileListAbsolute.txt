@@ -1,0 +1,10 @@
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CoreCompileInputs.cache
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe.config
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.pdb
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.dll
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.Modelos.pdb
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csprojAssemblyReference.cache
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CopyComplete
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe
+c:\users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.pdb
