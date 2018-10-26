@@ -31,7 +31,7 @@ namespace ByteBank.SistemaAgencia
             string valorMoedaOrigem = url2.GetValor("moedaOrigem");
             Console.WriteLine("Valor de moedaOrigem: " + valorMoedaOrigem);
 
-            Console.WriteLine(url2.GetValor("valor"));
+            Console.WriteLine(url2.GetValor("VALOr"));
             Console.ReadLine();
 
         }
