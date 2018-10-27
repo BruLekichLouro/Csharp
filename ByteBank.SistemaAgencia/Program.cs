@@ -26,7 +26,8 @@ namespace ByteBank.SistemaAgencia
 
             string padrao =
            "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
-            string textoDeTeste = "Meu nome é Guilherme, me ligue em 4784-4546";
+            // string textoDeTeste = "Meu nome é Guilherme, me ligue 4784-4546";
+            string textoDeTeste = "Ajhhfis  jaoa 4784-4546, ahfosda ahufhge ";
             Console.WriteLine(Regex.IsMatch(textoDeTeste, padrao));
             Match resultado = Regex.Match(textoDeTeste, padrao);
             Console.WriteLine(resultado.Value);
