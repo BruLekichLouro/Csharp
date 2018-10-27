@@ -24,10 +24,14 @@ namespace ByteBank.SistemaAgencia
             //Console.WriteLine(mensagem);
             //Console.WriteLine(outro);
 
-            string padrao =
-           "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+            // string padrao =
+           //"[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+           // string padrao = "[0-9][0-9][0-9][0-9][-][0-9][0-9][0-9][0-9]";
+            string padrao = "[0-9]{4}[-][0-9]{4}";
+
             // string textoDeTeste = "Meu nome é Guilherme, me ligue 4784-4546";
             string textoDeTeste = "Ajhhfis  jaoa 4784-4546, ahfosda ahufhge ";
+
             Console.WriteLine(Regex.IsMatch(textoDeTeste, padrao));
             Match resultado = Regex.Match(textoDeTeste, padrao);
             Console.WriteLine(resultado.Value);
