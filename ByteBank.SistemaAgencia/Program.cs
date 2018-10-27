@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
@@ -22,6 +23,13 @@ namespace ByteBank.SistemaAgencia
             //Console.WriteLine(dataFimPagamento);
             //Console.WriteLine(mensagem);
             //Console.WriteLine(outro);
+
+            string padrao =
+           "[0123456789][0123456789][0123456789][0123456789][-][0123456789][0123456789][0123456789][0123456789]";
+            string textoDeTeste = "Meu nome é Guilherme, me ligue em 4784-4546";
+            Console.WriteLine(Regex.IsMatch(textoDeTeste, padrao));
+            Match resultado = Regex.Match(textoDeTeste, padrao);
+            Console.WriteLine(resultado.Value);
 
             string urlParametros = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDestino=dolar&valor=1500";
             ExtratorValorDeArgumentosURL url2 = new ExtratorValorDeArgumentosURL(urlParametros);
