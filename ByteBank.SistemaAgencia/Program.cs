@@ -48,6 +48,14 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine("Valor de moedaOrigem: " + valorMoedaOrigem);
 
             Console.WriteLine(url2.GetValor("VALOr"));
+
+            //Testando classe object
+            object conta = new ContaCorrente(456, 687876);
+            Console.WriteLine(conta);
+            string contaToString = conta.ToString();
+
+            Console.WriteLine("Resultado " + contaToString);
+
             Console.ReadLine();
 
         }
