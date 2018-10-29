@@ -94,7 +94,7 @@ namespace ByteBank.Modelos
         }
 
         /// <summary>
-        /// Realiza o saqueeme uma  conta e depósito na segunda. Atualiza o valor da propriedade <see cref="Saldo"/>
+        /// Realiza o saque e me retorna uma  conta e depósito na segunda. Atualiza o valor da propriedade <see cref="Saldo"/>
         /// </summary>
         /// <exception cref="ArgumentException">Exeção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"</exception>
         /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o <see cref="Saldo"/>é menor que o valor utilizado no argumento <paramref name="valor"</exception>
