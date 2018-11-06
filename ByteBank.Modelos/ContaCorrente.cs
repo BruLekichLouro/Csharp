@@ -118,11 +118,21 @@ namespace ByteBank.Modelos
 
             contaDestino.Depositar(valor);
         }
-        //Testando método ToString
         public override string ToString()
         {
             return $"Número {Numero}, Agência {300*5}, Saldo {Saldo}";
             // return "Número " + Numero + ", Agência " + Agencia + ", Saldo " + Saldo;
+        }
+        public override bool Equals(object obj)
+        {
+            ContaCorrente outraConta = obj as ContaCorrente;
+
+            if (outraConta == null)
+            {
+                return false;
+            }
+
+            return Numero == outraConta.Numero && Agencia == outraConta.Agencia;
 
         }
     }
