@@ -36,8 +36,16 @@ namespace ByteBank.SistemaAgencia
 
             lista.Remover(contaDaBru);
 
-            Console.ReadLine();
+            Lista<string> clientes = new Lista<string>();
 
+            clientes.AdicionarVarios("Bruna", "Guilherme", "Romulo", "Denise");
+            for (int i = 0; i < clientes.Tamanho; i++)
+            {
+                Console.WriteLine($"Cliente na posição {i} :{clientes[i]} ");
+            }
+
+            Console.ReadLine();
         }
+        
     }
 }
