@@ -31,6 +31,13 @@ namespace ByteBank.SistemaAgencia
             _proximaPosicao++;
             //Console.WriteLine($"Adicionando no índice {_proximaPosicao} a conta {item.Agencia}/{item.Numero}");
         }
+        public void AdicionarVarios(params ContaCorrente[] itens) 
+        {                                                   
+            foreach (var conta in itens)
+            {
+                Adicionar(conta);
+            }
+        }
         private void VerificarCapacidade(int tamanhoNecessario)
         {
             if (_itens.Length >= tamanhoNecessario)
