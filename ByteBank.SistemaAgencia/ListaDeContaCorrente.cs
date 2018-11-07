@@ -11,6 +11,13 @@ namespace ByteBank.SistemaAgencia
     {
         private ContaCorrente[] _itens;
         private int _proximaPosicao;
+        public int Tamanho
+        {
+            get
+            {
+                return _proximaPosicao;
+            }
+        }
 
         public ListaDeContaCorrente(int capacidadeInicial = 5)
         {
@@ -22,7 +29,7 @@ namespace ByteBank.SistemaAgencia
             VerificarCapacidade(_proximaPosicao + 1);
             _itens[_proximaPosicao] = item;
             _proximaPosicao++;
-            Console.WriteLine($"Adicionando no índice {_proximaPosicao} a conta {item.Agencia}/{item.Numero}");
+            //Console.WriteLine($"Adicionando no índice {_proximaPosicao} a conta {item.Agencia}/{item.Numero}");
         }
         private void VerificarCapacidade(int tamanhoNecessario)
         {
@@ -31,7 +38,7 @@ namespace ByteBank.SistemaAgencia
                 return;
             }
             int novoTamanho = _itens.Length * 2;
-            Console.WriteLine("Aumentando capacidade da lista!");
+            //Console.WriteLine("Aumentando capacidade da lista!");
             if (novoTamanho < tamanhoNecessario)
             {
                 novoTamanho = tamanhoNecessario;
@@ -52,7 +59,7 @@ namespace ByteBank.SistemaAgencia
             {
                 ContaCorrente itemAtual = _itens[i];
 
-                if (itemAtual.Equals(item))//Comparando equivalencia entre objeetos
+                if (itemAtual.Equals(item))
                 {
                     indiceItem = i;
                     break;
@@ -66,12 +73,20 @@ namespace ByteBank.SistemaAgencia
             _proximaPosicao--;
             _itens[_proximaPosicao] = null;
         }
-        public void EscreverListaNaTela()
+        public ContaCorrente GetItemNoIndice(int indice)
         {
-            for (int i = 0; i < _proximaPosicao; i++)
+            if (indice < 0 || indice >= _proximaPosicao)
             {
-                ContaCorrente conta = _itens[i];
-                Console.WriteLine($"Conta no índice {i}: numero {conta.Agencia} {conta.Numero}");
+                throw new ArgumentOutOfRangeException(nameof(indice));
+            }
+            return _itens[indice];
+        }
+        //Indexador
+        public ContaCorrente this[int indice]
+        {
+            get
+            {
+                return GetItemNoIndice(indice);
             }
         }
     }
