@@ -41,7 +41,18 @@ namespace ByteBank.SistemaAgencia
             clientes.AdicionarVarios("Bruna", "Guilherme", "Romulo", "Denise");
             for (int i = 0; i < clientes.Tamanho; i++)
             {
-                Console.WriteLine($"Cliente na posição {i} :{clientes[i]} ");
+                // Console.WriteLine($"Cliente na posição {i} :{clientes[i]} ");
+            }
+
+            List<int> outrasIdades = new List<int>();
+            ListExtensoes.AdicionarVarios(outrasIdades, 1, 5687, 1987, 1567, 987);
+            outrasIdades.AdicionarVarios(1, 8, 12, 14, 22, 18);
+
+
+            outrasIdades.Remove(12);
+            for (int i = 0; i < outrasIdades.Count; i++)
+            {
+                Console.WriteLine($"Item na posição {i} :{outrasIdades[i]} ");
             }
 
             Console.ReadLine();
