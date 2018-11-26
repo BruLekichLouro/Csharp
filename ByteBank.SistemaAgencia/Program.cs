@@ -14,6 +14,32 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            
+            List<int> outrasIdades = new List<int>();
+            outrasIdades.Add(2);
+            ListExtensoes.AdicionarVarios(outrasIdades, 1, 5687, 1987, 1567, 987);
+            outrasIdades.AdicionarVarios(1, 8, 12, 14, 22, 18);
+
+            outrasIdades.Remove(12);
+
+            for (int i = 0; i < outrasIdades.Count; i++)
+            {
+                Console.WriteLine($"Item na posição {i} :{outrasIdades[i]} ");
+            }
+
+            List<string> nomes = new List<string>();
+            nomes.AdicionarVarios("Bruna", "Julia", "Daniela");
+
+            for (int i = 0; i < nomes.Count; i++)
+            {
+                Console.WriteLine(nomes[i]);
+            }
+
+
+            Console.ReadLine();
+        }
+        static void OutrosTestes()
+        {
             ListaDeContaCorrente lista = new ListaDeContaCorrente();
             ContaCorrente contaDaBru = new ContaCorrente(1111, 1111111);
 
@@ -27,7 +53,7 @@ namespace ByteBank.SistemaAgencia
               new ContaCorrente(874, 5679745),
               new ContaCorrente(874, 5679754),
               new ContaCorrente(874, 5679745));
-            
+
             for (int i = 0; i < lista.Tamanho; i++)
             {
                 ContaCorrente itemAtual = lista[i];
@@ -35,28 +61,15 @@ namespace ByteBank.SistemaAgencia
             }
 
             lista.Remover(contaDaBru);
-
             Lista<string> clientes = new Lista<string>();
 
             clientes.AdicionarVarios("Bruna", "Guilherme", "Romulo", "Denise");
             for (int i = 0; i < clientes.Tamanho; i++)
             {
-                // Console.WriteLine($"Cliente na posição {i} :{clientes[i]} ");
+                Console.WriteLine($"Cliente na posição {i} :{clientes[i]} ");
             }
 
-            List<int> outrasIdades = new List<int>();
-            ListExtensoes.AdicionarVarios(outrasIdades, 1, 5687, 1987, 1567, 987);
-            outrasIdades.AdicionarVarios(1, 8, 12, 14, 22, 18);
-
-
-            outrasIdades.Remove(12);
-            for (int i = 0; i < outrasIdades.Count; i++)
-            {
-                Console.WriteLine($"Item na posição {i} :{outrasIdades[i]} ");
-            }
-
-            Console.ReadLine();
         }
-        
+
     }
 }

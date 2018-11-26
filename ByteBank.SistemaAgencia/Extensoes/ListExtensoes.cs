@@ -8,9 +8,9 @@ namespace ByteBank.SistemaAgencia
 {
     public static class ListExtensoes
     {
-        public static void AdicionarVarios(this List<int> listaDeInteiros, params int[] itens)
+        public static void AdicionarVarios<T>(this List<T> listaDeInteiros, params T[] itens)
         {
-            foreach (int item in itens)
+            foreach (T item in itens)
             {
                 listaDeInteiros.Add(item);
             }
