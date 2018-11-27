@@ -9,7 +9,7 @@ namespace ByteBank.Modelos
     /// <summary>
     /// Esta classe define uma Conta Corrente do banco ByteBank.
     /// </summary>
-    public class ContaCorrente
+    public class ContaCorrente :IComparable
     {
         public Cliente Titular { get; set; }
         public int Numero { get; } //atributo que só é atribuído uma vez e dps SÒ pode ser lido!"Readonly"
@@ -134,6 +134,28 @@ namespace ByteBank.Modelos
 
             return Numero == outraConta.Numero && Agencia == outraConta.Agencia;
 
+        }
+
+        public int CompareTo(object obj)
+        {
+            var outraConta = obj as ContaCorrente;
+
+            if (outraConta == null)
+            {
+                return -1;
+            }
+
+            if (Numero < outraConta.Numero)
+            {
+                return -1;
+            }
+
+            if (Numero == outraConta.Numero)
+            {
+                return 0;
+            }
+
+            return 1;
         }
     }
 }
