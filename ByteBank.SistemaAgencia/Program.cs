@@ -15,24 +15,25 @@ namespace ByteBank.SistemaAgencia
         static void Main(string[] args)
         {
             
-            List<int> outrasIdades = new List<int>();
+            var outrasIdades = new List<int>();
             outrasIdades.Add(2);
             ListExtensoes.AdicionarVarios(outrasIdades, 1, 5687, 1987, 1567, 987);
             outrasIdades.AdicionarVarios(1, 8, 12, 14, 22, 18);
-
             outrasIdades.Remove(12);
+            outrasIdades.Sort();
 
             for (int i = 0; i < outrasIdades.Count; i++)
             {
                 Console.WriteLine($"Item na posição {i} :{outrasIdades[i]} ");
             }
 
-            List<string> nomes = new List<string>();
-            nomes.AdicionarVarios("Bruna", "Julia", "Daniela");
+            var nomesClientes = new List<string>();
+            nomesClientes.AdicionarVarios("Julia","Ana","Bruna" , "Daniela");
+            nomesClientes.Sort();
 
-            for (int i = 0; i < nomes.Count; i++)
+            for (int i = 0; i < nomesClientes.Count; i++)
             {
-                Console.WriteLine(nomes[i]);
+                Console.WriteLine(nomesClientes[i]);
             }
 
 
