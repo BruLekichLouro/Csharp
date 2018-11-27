@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ByteBank.Modelos;
 using ByteBank.Modelos.Funcionarios;
+using ByteBank.SistemaAgencia.Comparadores;
 using Humanizer;
 
 namespace ByteBank.SistemaAgencia
@@ -38,12 +39,12 @@ namespace ByteBank.SistemaAgencia
 
             var contas = new List<ContaCorrente>()
             {
+                new ContaCorrente(456, 800),
                 new ContaCorrente(234, 8000),
                 new ContaCorrente(234, 1),
-                new ContaCorrente(456, 800),
                 new ContaCorrente(588, 9930)
             };
-            contas.Sort();
+            contas.Sort(new ComparadorContaCorrentePorAgencia());
             foreach (var conta in contas)
             {
                 Console.WriteLine($"Conta número {conta.Numero}, ag. {conta.Agencia}");
