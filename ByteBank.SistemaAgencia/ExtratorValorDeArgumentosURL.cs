@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace ByteBank.SistemaAgencia
 {
-    class ExtratorValorDeArgumentosURL
+    public class ExtratorValorDeArgumentosURL
     {
-        public string URL { get; }
+        public string URL{ get; }
         private readonly string _argumentos;
 
         public ExtratorValorDeArgumentosURL(string url)
         {
-
             if (String.IsNullOrEmpty(url))
             {
                 throw new ArgumentException("O argumento url não pode ser nulo ou vazio.", nameof(url));
@@ -30,7 +29,7 @@ namespace ByteBank.SistemaAgencia
 
             string termo = nomeParametro + "=";
             int indiceTermo = argumentoEmCaixaAlta.IndexOf(termo);
-
+            
             string resultado = _argumentos.Substring(indiceTermo + termo.Length);
             int indiceEComercial = resultado.IndexOf('&');
             if (indiceEComercial == -1)
@@ -38,6 +37,7 @@ namespace ByteBank.SistemaAgencia
                 return resultado;
             }
             return resultado.Remove(indiceEComercial);
+            
 
         }
     }

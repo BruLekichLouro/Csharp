@@ -9,7 +9,7 @@ namespace ByteBank.Modelos
     /// <summary>
     /// Esta classe define uma Conta Corrente do banco ByteBank.
     /// </summary>
-    public class ContaCorrente :IComparable
+    public class ContaCorrente : IComparable
     {
         public Cliente Titular { get; set; }
         public int Numero { get; } //atributo que só é atribuído uma vez e dps SÒ pode ser lido!"Readonly"
@@ -94,7 +94,7 @@ namespace ByteBank.Modelos
         }
 
         /// <summary>
-        /// Realiza o saque e me retorna uma  conta e depósito na segunda. Atualiza o valor da propriedade <see cref="Saldo"/>
+        /// Realiza o saqueeme uma  conta e depósito na segunda. Atualiza o valor da propriedade <see cref="Saldo"/>
         /// </summary>
         /// <exception cref="ArgumentException">Exeção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"</exception>
         /// <exception cref="SaldoInsuficienteException">Exceção lançada quando o <see cref="Saldo"/>é menor que o valor utilizado no argumento <paramref name="valor"</exception>
@@ -118,11 +118,6 @@ namespace ByteBank.Modelos
 
             contaDestino.Depositar(valor);
         }
-        public override string ToString()
-        {
-            return $"Número {Numero}, Agência {300*5}, Saldo {Saldo}";
-            // return "Número " + Numero + ", Agência " + Agencia + ", Saldo " + Saldo;
-        }
         public override bool Equals(object obj)
         {
             ContaCorrente outraConta = obj as ContaCorrente;
@@ -138,6 +133,10 @@ namespace ByteBank.Modelos
 
         public int CompareTo(object obj)
         {
+            // Retornar negativo quando a instância precede o obj
+            // Retornar zero quando nossa instância e obj forem equivalentes;
+            // Retornar positivo diferente de zero quando a precedência for de obj;
+
             var outraConta = obj as ContaCorrente;
 
             if (outraConta == null)

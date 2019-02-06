@@ -24,6 +24,25 @@ namespace ByteBank.Modelos
                 _cpf = value;
             }
         }
+
+        //Testando méodo Equals
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        public override bool Equals(object obj)
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+        {
+            // Cliente outroCliente = (Cliente)obj;
+            Cliente outroCliente = obj as Cliente;
+
+            if (outroCliente == null)
+            {
+                return false;
+            }
+
+
+            return
+                    CPF == outroCliente.CPF;
+      
+        }
     }
 }
 

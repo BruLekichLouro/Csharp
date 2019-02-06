@@ -10,10 +10,12 @@ namespace ByteBank.SistemaAgencia
     {
         public static void AdicionarVarios<T>(this List<T> listaDeInteiros, params T[] itens)
         {
+            //o "THIS " mostra que o primeiro argumento é o tipo que queremos extender 
             foreach (T item in itens)
             {
                 listaDeInteiros.Add(item);
             }
+       
         }
     }
 }

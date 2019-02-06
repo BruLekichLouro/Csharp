@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AutenticacaoHelper.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Comparadores\ComparadorContaCorrentePorAgencia.cs" />
     <Compile Include="ContaCorrente.cs" />
     <Compile Include="Funcionarios\Auxiliar.cs" />
     <Compile Include="Funcionarios\Desenvolvedor.cs" />

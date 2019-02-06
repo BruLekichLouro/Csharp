@@ -23,22 +23,24 @@ namespace ByteBank.SistemaAgencia
             _itens = new T[capacidadeInicial];
             _proximaPosicao = 0;
         }
-
+        
         public void Adicionar(T item)
         {
             VerificarCapacidade(_proximaPosicao + 1);
-            // Console.WriteLine($"Adicionando item na posição {_proximaPosicao}");
+            Console.WriteLine($"Adicionando item na posição {_proximaPosicao}");
 
             _itens[_proximaPosicao] = item;
             _proximaPosicao++;
         }
+
         public void AdicionarVarios(params T[] itens)
         {
-            foreach (var conta in itens)
+            foreach (var conta in itens)//Melhor opção para laços em array que não se importa com indices
             {
                 Adicionar(conta);
             }
-        }
+        }//params também podem ser usados nos indexadores
+
         private void VerificarCapacidade(int tamanhoNecessario)
         {
             if (_itens.Length >= tamanhoNecessario)
@@ -60,7 +62,8 @@ namespace ByteBank.SistemaAgencia
             _itens = novoArray;
 
         }
-        public T GetItemNoIndice(int indice)
+
+        public T GetItemNoIndice(int indice)//Metodo retorna uma ContaCOrrente
         {
             if (indice < 0 || indice >= _proximaPosicao)
             {
@@ -76,7 +79,14 @@ namespace ByteBank.SistemaAgencia
                 return GetItemNoIndice(indice);
             }
         }
-        
+        //public T this[string texto]
+        //{
+        //    get
+        //    {
+        //        return null;//Teste
+        //    }
+        //}
+
         public void Remover(T item)
         {
             int indiceItem = -1;
@@ -85,7 +95,7 @@ namespace ByteBank.SistemaAgencia
             {
                 T itemAtual = _itens[i];
 
-                if (itemAtual.Equals(item))
+                if (itemAtual.Equals(item))//Comparando equivalencia entre objeetos
                 {
                     indiceItem = i;
                     break;
@@ -97,7 +107,7 @@ namespace ByteBank.SistemaAgencia
 
             }
             _proximaPosicao--;
-            // _itens[_proximaPosicao] = null;
+           // _itens[_proximaPosicao] = null; //Não saabemos se o argumento T será um tipo de valor ou referÊncia 
         }
 
     }
