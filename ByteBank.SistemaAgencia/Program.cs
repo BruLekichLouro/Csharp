@@ -16,74 +16,7 @@ namespace ByteBank.SistemaAgencia
         static void Main(string[] args)
         {
 
-            GravarUsandoEntity();
-            //RecuperarProdutos();
-            //ExcluirProduto();
-            //RecuperarProdutos();
-            //AtualizarProduto();
-            
-            Console.ReadLine();
-        }
-
-        private static void AtualizarProduto()
-        {
-            // incluir um produto
-            GravarUsandoEntity();
-            RecuperarProdutos();
-
-            using (var contexto = new ContaDAOEntity())
-            {
-                ContaCorrente primeiro = contexto.Contas().First();
-                primeiro.Titular.Nome = "Bruna Lekich LOuro";
-                contexto.Atualizar(primeiro);
-                
-
-            }
-
-            // atualizar o produto
-            RecuperarProdutos();
-        }
-
-        private static void ExcluirProduto()
-        {
-           using(var contexto =  new ContaDAOEntity())
-            {
-                IList<ContaCorrente> clientes = contexto.Contas();//chamando metodo de listar clientes
-                foreach (var item in clientes)
-                {
-                    contexto.Remover(item);
-                }
-             
-            }
-        }
-
-        private static void RecuperarProdutos()
-        {
-            using (var contexto = new ContaDAOEntity())
-            {
-                IList<ContaCorrente> clientes = contexto.Contas();
-                Console.WriteLine("foram encontrados {0} cliente(s)", clientes.Count);
-
-                foreach (var item in clientes)
-                {
-                    Console.WriteLine(item.Titular);
-                } 
-            }  
-        }
-
-        private static void GravarUsandoEntity()
-        {
-            ContaCorrente contA = new ContaCorrente(286, 2867779);
-            Cliente bruna = new Cliente();
-            bruna.Nome = "Bruna";
-            contA.Titular = bruna;
-           
-        
-            using (var contexto = new ContaDAOEntity())
-            {
-                contexto.Adicionar(contA);
-               
-            }
+            var enderecoDoArquivo = " ";
         }
 
         static void ListaGenericaExtensaoLinqLambda()
