@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -16,10 +17,38 @@ namespace ByteBank.SistemaAgencia
         static void Main(string[] args)
         {
 
-            var enderecoDoArquivo = " ";
-        }
+            var enderecoDoArquivo = "contas.txt";
 
-        static void ListaGenericaExtensaoLinqLambda()
+            var fluxoDoArquivo = new FileStream(enderecoDoArquivo, FileMode.Open);
+
+            var buffer = new byte[1024];
+            var numeroDeBytesLidos = -1;
+
+            while (numeroDeBytesLidos != 0)
+            {
+                numeroDeBytesLidos = fluxoDoArquivo.Read(buffer, 0, 1024);
+                EscreverBuffer(buffer);
+
+            }
+
+
+            Console.ReadLine();
+        }
+        static void EscreverBuffer(byte[] buffer)
+        {
+            var utf8 = new UTF32Encoding();
+            var texto = utf8.GetString(buffer);
+            Console.Write(texto);
+
+            //foreach (var meuByte in buffer)
+            //{
+            //    Console.Write(meuByte);
+            //    Console.Write(" ");
+            //}
+        }
+    
+
+        private static void ListaGenericaExtensaoLinqLambda()
         {
             //Testando lista generica, extensao de metodos, sort(), orderby,
             //Where, IComprable e IComparer
