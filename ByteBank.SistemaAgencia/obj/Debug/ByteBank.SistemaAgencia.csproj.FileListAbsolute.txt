@@ -200,11 +200,6 @@ C:\Users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.
 C:\Users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe.config
 C:\Users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.pdb
 C:\Users\bubub\source\repos\ByteBank\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CopyComplete
-C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csprojAssemblyReference.cache
-C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe.config
-C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CoreCompileInputs.cache
-C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe
-C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.pdb
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe.config
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.exe
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\ByteBank.SistemaAgencia.pdb
@@ -401,4 +396,9 @@ C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\vi\Humanizer.r
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\zh-CN\Humanizer.resources.dll
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\zh-Hans\Humanizer.resources.dll
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\bin\Debug\zh-Hant\Humanizer.resources.dll
+C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csprojAssemblyReference.cache
+C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe.config
+C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CoreCompileInputs.cache
 C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.csproj.CopyComplete
+C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.exe
+C:\Users\bubub\Documents\Csharp\ByteBank.SistemaAgencia\obj\Debug\ByteBank.SistemaAgencia.pdb
