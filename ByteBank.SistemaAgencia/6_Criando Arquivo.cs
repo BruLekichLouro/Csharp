@@ -26,5 +26,17 @@ namespace ByteBank.SistemaAgencia
                 fluxoDeArquivo.Write(bytes, 0, bytes.Length);
             }
         }
+       static void CriarArquivoComWriter()
+        {
+            var caminhoNovoArquivo = "contasExportadas.CSV";
+
+            using(var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.CreateNew))
+            {
+                using(var escritor = new StreamWriter(fluxoDeArquivo))
+                {
+                    escritor.Write("456,65465,456.0,Pedro");
+                }
+            }
+        }
     }
 }
