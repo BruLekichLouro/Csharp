@@ -26,7 +26,7 @@ namespace ByteBank.SistemaAgencia
                         var linha = leitor.ReadLine();
                         var contaCorrente = ConverterStringParaContaCorrente(linha);
 
-                        Console.WriteLine($"Conta número {contaCorrente.Numero}, ag. {contaCorrente.Agencia}, Saldo {contaCorrente.Saldo}");
+                        Console.WriteLine($"{contaCorrente.Titular.Nome}: Conta número {contaCorrente.Numero}, ag. {contaCorrente.Agencia}, Saldo {contaCorrente.Saldo}");
 
                     // Console.WriteLine(linha);
                 }
@@ -37,7 +37,7 @@ namespace ByteBank.SistemaAgencia
         
         static ContaCorrente ConverterStringParaContaCorrente(string linha)
         {
-            string[] campos = linha.Split(' ');
+            string[] campos = linha.Split(',');
             var agencia = campos[0];
             var numero = campos[1];
             var saldo = campos[2].Replace('.', ',');
