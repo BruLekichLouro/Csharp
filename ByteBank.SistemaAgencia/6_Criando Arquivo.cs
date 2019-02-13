@@ -46,6 +46,7 @@ namespace ByteBank.SistemaAgencia
             {
                 for (int i = 0; i < 10000000; i++)
                 {
+                    escritor.WriteLine($"Linha {i}");
                     escritor.Flush();
 
                     Console.WriteLine($"Linha {i} foi escrita no arquivo. Tecle enter p adicionar mais uma!");
@@ -54,4 +55,4 @@ namespace ByteBank.SistemaAgencia
             }
         }
     }
-}
+}#
