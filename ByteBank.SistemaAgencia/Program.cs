@@ -16,7 +16,7 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            TestaEscrita();
+            LeituraBinaria();
             Console.WriteLine("Aplicação finalizada...");
 
             Console.ReadLine();

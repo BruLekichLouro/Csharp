@@ -214,6 +214,7 @@
     <Compile Include="4_LidandoComStreamDiretamente.cs" />
     <Compile Include="5_UsandoStreamReader.cs" />
     <Compile Include="6_Criando Arquivo.cs" />
+    <Compile Include="7_StreamBinario.cs" />
     <Compile Include="BancoContext.cs" />
     <Compile Include="ContaDAOEntity.cs" />
     <Compile Include="Estagiario.cs" />
