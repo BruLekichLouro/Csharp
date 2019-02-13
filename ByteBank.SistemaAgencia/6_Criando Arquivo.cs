@@ -30,11 +30,26 @@ namespace ByteBank.SistemaAgencia
         {
             var caminhoNovoArquivo = "contasExportadas.CSV";
 
-            using(var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.CreateNew))
+            using(var fluxoDeArquivo = new FileStream(caminhoNovoArquivo, FileMode.Create))
+            using(var escritor = new StreamWriter(fluxoDeArquivo))
             {
-                using(var escritor = new StreamWriter(fluxoDeArquivo))
+                escritor.Write("456,65465,456.0,Pedro");
+            }
+            
+        }
+        static void TestaEscrita()
+        {
+            var caminhoArquivo = "Text.txt";
+
+            using (var fluxoDoArquuivo = new FileStream(caminhoArquivo, FileMode.Create))
+            using(var escritor = new StreamWriter(fluxoDoArquuivo))
+            {
+                for (int i = 0; i < 10000000; i++)
                 {
-                    escritor.Write("456,65465,456.0,Pedro");
+                    escritor.Flush();
+
+                    Console.WriteLine($"Linha {i} foi escrita no arquivo. Tecle enter p adicionar mais uma!");
+                    Console.ReadLine();
                 }
             }
         }
